@@ -1,0 +1,293 @@
+@import url("https://fonts.googleapis.com/css2?family=Manufacturing+Consent&family=Pacifico&family=Zen+Dots&display=swap");
+
+/* 导航栏主容器样式 */
+.top-box {
+  border: 2px dashed red;
+  position: fixed;
+  width: 100%;
+  height: 70px;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f1f1f4;
+  backdrop-filter: blur(3px);
+  z-index: 100;
+}
+
+/* 左侧区域 */
+.logo {
+  position: relative;
+  width: 200px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 20px; /* 图片与文字间距空间 */
+}
+
+/* 图片样式 */
+.logo img {
+  width: 65px;
+  height: 60px;
+  object-fit: cover; /* 整图自动填充尺寸适应 */
+  margin-left: 15px; /* 图片左位置外边距离 */
+}
+
+/* sunny 文字样式 */
+.logo h2 {
+  font-family: "Pacifico", cursive;
+  font-size: 32px;
+  color: #faaa48;
+  font-weight: 800;
+  /* 禁止文字光标被选中 ⬇️ */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* 居中区域导航栏 */
+.ul-box {
+  width: auto;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.ul-box li {
+  width: 100px;
+  height: 100%;
+  list-style: none;
+}
+
+.ul-box li a {
+  text-decoration: none; /* 移除下划线 */
+  color: black;
+  font-size: 20px;
+  font-weight: 600;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+/* 高亮条 */
+.ul-box .highlight-hover {
+  background: #faaa48;
+  position: absolute;
+  top: 5px;
+  left: 0;
+  height: calc(100% - 10px);
+  width: 120px;
+  border-radius: 20px;
+  z-index: -1;
+}
+
+/* 音乐容器区域 */
+.music-box {
+  width: 250px;
+  height: 100%;
+  position: absolute;
+  right: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @media (max-width: 1200px) {
+    display: none;
+  }
+}
+
+/* 歌曲封面 */
+.music-cover {
+  width: 60px;
+  height: 60px;
+}
+
+/* 按钮 */
+.play-btn {
+  position: relative;
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+/* 封面图片 */
+.play-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+  display: block;
+}
+
+/* 按钮图标 */
+.play-btn i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #f1f1f4;
+  font-size: 35px;
+  opacity: 0; /* 不显示图标 */
+  transition: opacity 0.3s; /* 过度消失 */
+}
+
+/* 悬停显示按钮 */
+.music-cover:hover .play-btn i {
+  opacity: 1; /* 显示图标 */
+  cursor: pointer; /* 悬停手性 */
+}
+
+/* 悬停背景模糊图 */
+.music-cover:hover .play-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3); /* 背景颜色 */
+  backdrop-filter: blur(3px); /* 背景滤镜 */
+  border-radius: 15px;
+}
+
+/* 播放信息 */
+.music-area {
+  width: 180px;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 按钮区域 */
+.music-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+/* 上一曲/下一曲 */
+.superior-btn,
+.down-btn {
+  border: none;
+  cursor: pointer;
+  background: none;
+}
+
+/* 上一曲/下一曲(图标) */
+.music-btn .material-icons {
+  color: #2c2b2b;
+  font-size: 32px;
+  transition: all 0.2s ease;
+}
+
+/* 悬停按钮图标改颜色 */
+.music-btn .material-icons:hover {
+    color: rgba(97, 97, 97, 0.7);
+}
+
+/* 歌曲信息 text 容器 */
+.song-text {
+  text-align: center;
+  width: 120px;
+}
+
+/* 歌曲 */
+.song-text h4 {
+  font-size: 16px;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* 歌手 */
+.song-text p {
+  font-size: 12px;
+  font-weight: 300;
+}
+
+/* 进度条时间 */
+.input-date {
+    width: 100%;
+    height: 100%;
+    gap: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* 进度条 */
+.input-date .progress {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 80%;
+    height: 5px;
+    background-size: 50% 100%;
+    border-radius: 5px;
+    cursor: pointer;                /* 手型 */
+    border: none;
+    outline: none;              /* 移除焦点轮廓 */
+}
+
+.input-date .progress::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 5px;
+    height: 12px;
+    background: #faaa48;
+    border-radius: 5px;
+    border: none;
+}
+
+.input-date .progress::-moz-range-thumb {
+    -moz-appearance: none;
+    width: 5px;
+    height: 12px;
+    background: #faaa48;
+    border-radius: 5px;
+    border: none;
+}
+
+/* 歌曲时间 */
+.input-date span {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* 右侧按钮区域 */
+.menu-btn {
+  width: 70px;
+  height: 70px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: 2px solid;
+}
+
+/* 按钮 */
+.menu-btn button {
+  border: none;
+  background: none;
+}
+
+/* 按钮图标 */
+.menu-btn .material-icons {
+  font-size: 40px;
+  color: #2c2b2b;
+  transition: all 0.5s ease;
+}
+
+/* 悬停按钮改变颜色 */
+.menu-btn .material-icons:hover {
+  color: rgba(147, 147, 147, 0.868);
+}

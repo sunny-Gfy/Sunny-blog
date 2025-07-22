@@ -1,0 +1,17 @@
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#root {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    padding-top: 70px;
+    /* display: grid;
+    grid-template-rows: auto 1fr; 
+    overflow: visible; */
+}

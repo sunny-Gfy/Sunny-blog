@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 引入图标库 -->
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- 基础样式 -->
+    <link rel="stylesheet" href="./css/root.css">
+    <!-- 导航栏样式 -->
+    <link rel="stylesheet" href="./css/nav.css">
+</head>
+<body>
+    
+    <!-- ==== 全局容器 ==== -->
+    <div id="root">
+        <!-- 【顶部导航栏】内容：logo，导航栏，mini音乐，菜单按钮 -->
+        <nav class="top-box">
+            <!-- ----左侧-logo---- -->
+            <div class="logo">
+                <img src="logo.png" alt="">
+                <h2>Sunny</h2>
+            </div>
+            <!-- ----居中-导航栏---- -->
+            <ul class="ul-box">
+                <!-- 悬停高亮条 -->
+                <div class="highlight-hover"></div>
+
+                <!-- 导航项 -->
+                <li><a href="#">主页</a></li>
+                <li><a href="#">分类</a></li>
+                <li><a href="#">关于</a></li>
+                <li><a href="#">联系</a></li>
+                <li><a href="#">更多</a></li>
+            </ul>
+
+            <!-- ----右侧-音乐播放器---- -->
+            <div class="music-box">
+                <audio src="" id="music"></audio>
+                <!-- 歌曲封面+播放按钮 -->
+                <div class="music-cover">
+                    <button class="play-btn play">
+                        <!-- 封面 -->
+                        <img src="https://i.pinimg.com/736x/88/af/c4/88afc42433180c5b7fe62aec63a63263.jpg" alt="">
+                        <!-- 播放 ▶️ -->
+                        <i class="material-icons">play_arrow</i>
+                    </button>
+                </div>
+                <!-- ----播放歌曲状态---- -->
+                <div class="music-area">
+                    
+                    <!-- 按钮🔘 -->
+                    <div class="music-btn">
+                        <!-- 上一曲⏮️ -->
+                        <button class="superior-btn">
+                            <i class="material-icons">skip_previous</i>
+                        </button>
+
+                        <!-- 歌曲信息文字 -->
+                        <div class="song-text">
+                            <h4 class="title">未知歌曲</h4>
+                            <p class="artist">未知歌手</p>
+                        </div>
+                        
+                        <!-- 下一曲⏭️ -->
+                         <button class="down-btn">
+                            <i class="material-icons">skip_next</i>
+                         </button>
+                    </div>
+
+                    <!-- 进度条时间 -->
+                     <div class="input-date">
+                        <span class="current-time">0:00</span>
+                        <input type="range" class="progress" min="0" max="100" value="0">
+                        <span class="total-time">3:45</span>
+                     </div>
+                     
+                </div>
+            </div>
+
+            <!-- ----右侧菜单区域---- -->
+            <div class="menu-btn">
+                <button>
+                    <i class="material-icons">apps</i>
+                </button>                
+            </div>
+        </nav>
+    </div>
+
+    <!-- 音乐数组 -->
+    <script src="./js/Date.js"></script>
+    <!-- Gsap动画库 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <!-- 导航栏-悬停跟踪鼠标 -->
+    <script src="./js/nav.js"></script>
+    <!-- 导航栏-音乐组位 -->
+    <script src="./js/nav-music.js"></script>
+</body>
+</html>
