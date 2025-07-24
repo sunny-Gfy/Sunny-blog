@@ -29,10 +29,10 @@ const sliderTrack = () => {
     const percentage = (value - min) * 100 / (max - min);
 
     // 修改 proGress 进度条的样式背景色
-    proGress.style.background = `linear-gradient(to right, #faaa48 ${percentage}%, rgba(220, 220, 220, 0.6) ${percentage}%)`;
+    proGress.style.background = `linear-gradient(to right, #eb5e28 ${percentage}%, rgba(220, 220, 220, 0.6) ${percentage}%)`;
 }
 
-proGress.style.background = `linear-gradient(to right, #faaa48 ${proGress.value}%, rgba(220, 220, 220, 0.6) ${proGress.value}%)`;
+proGress.style.background = `linear-gradient(to right, #eb5e28 ${proGress.value}%, rgba(220, 220, 220, 0.6) ${proGress.value}%)`;
 
 // 先加载所有音乐资源
 window.addEventListener('load', () =>{
