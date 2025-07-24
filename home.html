@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 引入图标库 -->
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- 基础样式 -->
+    <link rel="stylesheet" href="./css/root.css">
+    <!-- 导航栏样式 -->
+    <link rel="stylesheet" href="./css/nav.css">
+    <!-- 导航栏-右侧菜单样式 -->
+    <link rel="stylesheet" href="./css/menu.css">
+    <!-- 主 main 样式 -->
+    <link rel="stylesheet" href="./css/main.css">
+    <!-- 页脚样式 -->
+    <link rel="stylesheet" href="./css/footer.css">
+</head>
+<body>
+    
+    <!-- ==== 全局容器 ==== -->
+    <div id="root">
+        <!-- 【顶部导航栏】内容：logo，导航栏，mini音乐，菜单按钮 -->
+        <nav class="top-box">
+            <!-- ----左侧-logo---- -->
+            <div class="logo">
+                <img src="logo.png" alt="">
+                <h2>Sunny</h2>
+            </div>
+            <!-- ----居中-导航栏---- -->
+            <ul class="ul-box">
+                <!-- 悬停高亮条 -->
+                <div class="highlight-hover"></div>
+
+                <!-- 导航项 -->
+                <li><a href="#">主页</a></li>
+                <li><a href="#">分类</a></li>
+                <li><a href="#">关于</a></li>
+                <li><a href="#">联系</a></li>
+                <li><a href="#">更多</a></li>
+            </ul>
+
+            <!-- ----右侧-音乐播放器---- -->
+            <div class="music-box">
+                <audio src="" id="music"></audio>
+                <!-- 歌曲封面+播放按钮 -->
+                <div class="music-cover">
+                    <button class="play-btn play">
+                        <!-- 封面 -->
+                        <img src="https://i.pinimg.com/736x/88/af/c4/88afc42433180c5b7fe62aec63a63263.jpg" alt="">
+                        <!-- 播放 ▶️ -->
+                        <i class="material-icons">play_arrow</i>
+                    </button>
+                </div>
+                <!-- ----播放歌曲状态---- -->
+                <div class="music-area">
+                    
+                    <!-- 按钮🔘 -->
+                    <div class="music-btn">
+                        <!-- 上一曲⏮️ -->
+                        <button class="superior-btn">
+                            <i class="material-icons">skip_previous</i>
+                        </button>
+
+                        <!-- 歌曲信息文字 -->
+                        <div class="song-text">
+                            <h4 class="title">未知歌曲</h4>
+                            <p class="artist">未知歌手</p>
+                        </div>
+                        
+                        <!-- 下一曲⏭️ -->
+                         <button class="down-btn">
+                            <i class="material-icons">skip_next</i>
+                         </button>
+                    </div>
+
+                    <!-- 进度条时间 -->
+                     <div class="input-date">
+                        <span class="current-time">0:00</span>
+                        <input type="range" class="progress" min="0" max="100" value="0">
+                        <span class="total-time">3:45</span>
+                     </div>
+                     
+                </div>
+            </div>
+
+            <!-- ----右侧菜单按钮---- -->
+            <div class="menu-btn">
+                <button>
+                    <i class="material-icons">dashboard</i>
+                </button> 
+            </div>
+        </nav>
+        <!-- ================ 【 按钮打开弹窗卡片 】 ================ -->
+        <div class="menu-box">
+            <!-- ---- 音乐播放器卡片 ---- -->
+            <div class="music-card item-card">
+                <p>music</p>
+            </div>
+
+            <!-- ---- 待办卡片功能 ---- -->
+            <div class="todo-card item-card">
+                <p>todo</p>
+            </div>
+
+             <!-- ---- 天气预报卡片功能 ---- -->
+            <div class="tqyb-card item-card">
+                <p>天气预报</p>
+            </div>
+        </div>
+
+        <!-- ================【 主容器 】================ -->
+        <!-- 🏷️功能模块：
+            - 🎠轮播卡片
+            - 🔥热门内容卡片
+            - 🗂️分类导航
+            - 📔动态内容展示
+            - 🪪右侧信息侧边区域
+        -->
+        <!-- 【 动态内容展示 】 -->
+        <div class="main-box">
+            <!-- ---- 内容展示 ---- -->
+            <div class="main-content content">
+                <!-- 轮播 + 热门容器 -->
+                <div class="top-contentBox">
+                    <!-- --- 轮播卡片  --- -->
+                    <div class="slider-card">www</div>
+                    <!-- --- 热门内容卡片 --- -->
+                    <div class="popular-card">www</div>
+                </div>
+                <!-- --- 分类导航 --- -->
+                <div class="nav-card">
+                    <ul class="ul-card">
+                        <!-- -- 悬停高亮调 -- -->
+                        <div class="heihligtion"></div>
+                        
+                        <!-- -- 导航项 -- -->
+                        <li><a href="#">全部</a></li>
+                        <li><a href="#">前端</a></li>
+                        <li><a href="#">教程</a></li>
+                        <li><a href="#">作品</a></li>
+                        <li><a href="#">3d打印技术</a></li>
+                        <li><a href="#">开源分享</a></li>
+                        <li><a href="#">学习经验</a></li>
+                        <li><a href="#">软件技术</a></li>
+                    </ul>
+                </div>
+                
+            </div>
+            <!-- ---- 副右-信息侧边栏 ---- -->
+            <div class="right-content content">
+                <!-- -- 个人作者 -- -->
+                <div class="author-card">作者卡片</div>
+            </div>
+        </div>
+
+        <!-- ====【 页脚 】内容: 内容待定==== -->
+        <footer class="footer-box">
+
+        </footer>
+    </div>
+
+    <!-- 音乐数组 -->
+    <script src="./js/Date.js"></script>
+    <!-- Gsap动画库 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <!-- 导航栏-悬停跟踪鼠标 -->
+    <script src="./js/nav.js"></script>
+    <!-- 导航栏-音乐组位 -->
+    <script src="./js/nav-music.js"></script>
+    <!-- 菜单 -->
+    <script src="./js/menu.js"></script>
+</body>
+</html>
