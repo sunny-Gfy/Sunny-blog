@@ -1,0 +1,84 @@
+/* === 右侧按钮区域 === */
+.menu-btn {
+  width: 70px;
+  height: 70px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border-left: 2px solid; */
+}
+
+/* 按钮 */
+.menu-btn button {
+  border: none;
+  background: none;
+}
+
+/* 按钮图标 */
+.menu-btn .material-icons {
+  font-size: 40px;
+  color: #252422;
+  transition: all 0.5s ease;
+}
+
+/* 悬停按钮改变颜色 */
+.menu-btn .material-icons:hover {
+  color: #eb5e28;
+}
+
+/* ==== 菜单卡片 ==== */
+.menu-box {
+  width: 90vw;
+  height: 70vh;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  margin-top: 20px;
+  background: rgba(255, 252, 242, 0.8);
+  box-shadow: 0 0 10px rgba(241, 241, 244, 0.8);
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  transition: opacity 0.8s;
+  display: grid;
+  grid-template-columns: 550px 250px 175px;
+  grid-gap: 20px;
+  padding: 30px;
+  z-index: 10;
+  @media (max-width: 900px) {
+    width: 80vw;
+  }
+}
+
+.menu-box.visible {
+  display: block;
+}
+
+/* ---- 弹窗卡片加载子卡片 ---- */
+/* 【 所有卡片 item-card 设定网格 】 */
+.item-card {
+  border: 1px black solid;
+  /* height: 380px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+}
+
+/* 【 音乐卡片 】 */
+.music-card {
+  height: 350px;
+}
+
+/* 【 待办清单卡片 】 */
+
+.todo-card {
+  height: 350px;
+}
+
+/* 【 天气预报卡片 】 */
+.tqyb-card {
+  height: 175px;
+}
