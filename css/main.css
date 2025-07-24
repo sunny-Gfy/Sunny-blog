@@ -1,0 +1,108 @@
+/* ==== 【 内容展示与右侧内容展示同步更新样式 】 ==== */
+.main-box .content {
+    position: relative;
+}
+
+/* ==== 【 主内容样式 】 ==== */
+.main-content {
+    width: 75%;
+    height: 100%;
+    display: flex;
+    position: relative;
+    /* justify-content: center; */
+    flex-direction: column;
+    border: 2px solid;
+}
+
+/* ----轮播 + 热门容器 ---- */
+.top-contentBox {
+    width: 100%;
+    height: 500px;
+    border: #252422 1px dashed;
+    display: flex;
+    justify-content: center;
+}
+
+/* --- 轮播卡片 --- */
+.slider-card {
+    width: 50%;
+    height: 300px;
+    border: 1px dashed #252422;
+}
+
+/* --- 热门卡片 --- */
+.popular-card {
+    width: 50%;
+    height: 380px;
+    border: 1px dashed #252422;
+}
+
+/* ---- 分类导航栏 ---- */
+.nav-card {
+    width: 100%;
+    height: 50px;
+    border: 1.5px solid #403d39;
+    border-radius: 10px;
+    box-shadow: 0 0 8px #ccc5b9;
+    margin: 8px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* --- 导航项 --- */
+.nav-card ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+/* -- 分类名 -- */
+.nav-card li {
+    list-style: none;
+    min-width: 50px;
+    height: 100%;
+    padding: 0 12px;
+    gap: 10px;
+    white-space: nowrap;
+}
+
+/* - 导航链接 - */
+.nav-card li a  {
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    font-weight: 600;
+    color: #252422;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* ==== 【 右侧内容样式 】 ==== */
+.right-content {
+    width: 25%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    overflow: hidden;
+}
+
+/* ---- 作者卡片 ---- */
+.author-card {
+    width: 310px;
+    height: 440px;
+    border-radius: 15px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #eb5e28;
+    font-size: 25px;
+}
