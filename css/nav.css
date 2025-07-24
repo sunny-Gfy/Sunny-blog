@@ -1,21 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Manufacturing+Consent&family=Pacifico&family=Zen+Dots&display=swap");
 
-/* 导航栏主容器样式 */
-.top-box {
-  border: 2px dashed red;
-  position: fixed;
-  width: 100%;
-  height: 70px;
-  top: 0;
-  left: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #f1f1f4;
-  backdrop-filter: blur(3px);
-  z-index: 100;
-}
-
 /* 左侧区域 */
 .logo {
   position: relative;
@@ -23,7 +7,10 @@
   height: 100%;
   display: flex;
   align-items: center;
-  gap: 20px; /* 图片与文字间距空间 */
+  gap: 10px; /* 图片与文字间距空间 */
+  @media (max-width: 900px) {
+    width: 350px;
+  }
 }
 
 /* 图片样式 */
@@ -38,23 +25,32 @@
 .logo h2 {
   font-family: "Pacifico", cursive;
   font-size: 32px;
-  color: #faaa48;
+  color: #eb5e28;
   font-weight: 800;
   /* 禁止文字光标被选中 ⬇️ */
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  @media (max-width: 900px) {
+    margin: 0 auto;
+  }
 }
 
 /* 居中区域导航栏 */
 .ul-box {
-  width: auto;
+  width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  @media (max-width: 800px) {
+    display: none;
+  }
 }
 
 .ul-box li {
@@ -73,12 +69,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: default;
   z-index: 1;
 }
 
 /* 高亮条 */
 .ul-box .highlight-hover {
-  background: #faaa48;
+  background: #eb5e28;
   position: absolute;
   top: 5px;
   left: 0;
@@ -131,7 +128,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #f1f1f4;
+  color: #eb5e28;
   font-size: 35px;
   opacity: 0; /* 不显示图标 */
   transition: opacity 0.3s; /* 过度消失 */
@@ -185,14 +182,14 @@
 
 /* 上一曲/下一曲(图标) */
 .music-btn .material-icons {
-  color: #2c2b2b;
+  color: #252422;
   font-size: 32px;
   transition: all 0.2s ease;
 }
 
 /* 悬停按钮图标改颜色 */
 .music-btn .material-icons:hover {
-    color: rgba(97, 97, 97, 0.7);
+    color: #eb5e28;
 }
 
 /* 歌曲信息 text 容器 */
@@ -243,7 +240,7 @@
     -webkit-appearance: none;
     width: 5px;
     height: 12px;
-    background: #faaa48;
+    background: #eb5e28;
     border-radius: 5px;
     border: none;
 }
@@ -252,7 +249,7 @@
     -moz-appearance: none;
     width: 5px;
     height: 12px;
-    background: #faaa48;
+    background: #eb5e28;
     border-radius: 5px;
     border: none;
 }
@@ -261,33 +258,4 @@
 .input-date span {
     font-size: 12px;
     font-weight: 500;
-}
-
-/* 右侧按钮区域 */
-.menu-btn {
-  width: 70px;
-  height: 70px;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-left: 2px solid;
-}
-
-/* 按钮 */
-.menu-btn button {
-  border: none;
-  background: none;
-}
-
-/* 按钮图标 */
-.menu-btn .material-icons {
-  font-size: 40px;
-  color: #2c2b2b;
-  transition: all 0.5s ease;
-}
-
-/* 悬停按钮改变颜色 */
-.menu-btn .material-icons:hover {
-  color: rgba(147, 147, 147, 0.868);
 }
