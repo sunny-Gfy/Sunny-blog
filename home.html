@@ -13,7 +13,7 @@
     <!-- 导航栏-右侧菜单样式 -->
     <link rel="stylesheet" href="./css/menu.css">
     <!-- 主 main 样式 -->
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/main/main.css">
     <!-- 页脚样式 -->
     <link rel="stylesheet" href="./css/footer.css">
 </head>
@@ -120,15 +120,31 @@
         -->
         <!-- 【 动态内容展示 】 -->
         <div class="main-box">
+            <!-- 轮播 + 热门 + 作品集容器 -->
+            <div class="top-contentBox">
+                <!-- --- 轮播卡片  --- -->
+                <div class="slider-card">轮播</div>
+                <!-- --- 热门内容卡片 --- -->
+                <div class="popular-card">热门</div>
+                <!-- --- 作品集卡片 --- -->
+                <div class="zuopin-card">
+                    <!-- 小卡片 -->
+                    <button href="#" class="itme-btn cheng">
+                        <p>前端</p>
+                        <i class="iconfont icon-code"></i>
+                    </button>
+                    <button href="#" class="itme-btn lan">
+                        <p>建模</p>
+                        <i class="iconfont icon-ziyoujianmo"></i>
+                    </button>
+                    <button href="#" class="itme-btn zi">
+                        <p>生活</p>
+                        <i class="iconfont icon-biaoqing"></i>
+                    </button>
+                </div>
+            </div>
             <!-- ---- 内容展示 ---- -->
             <div class="main-content content">
-                <!-- 轮播 + 热门容器 -->
-                <div class="top-contentBox">
-                    <!-- --- 轮播卡片  --- -->
-                    <div class="slider-card">www</div>
-                    <!-- --- 热门内容卡片 --- -->
-                    <div class="popular-card">www</div>
-                </div>
                 <!-- --- 分类导航 --- -->
                 <div class="nav-card">
                     <ul class="ul-card">
@@ -146,12 +162,13 @@
                         <li><a href="#">软件技术</a></li>
                     </ul>
                 </div>
-                
-            </div>
-            <!-- ---- 副右-信息侧边栏 ---- -->
-            <div class="right-content content">
-                <!-- -- 个人作者 -- -->
-                <div class="author-card">作者卡片</div>
+                <!-- ---- 副右-信息侧边栏 ---- -->
+                <div class="right-content content">
+                    <!-- --- 个人作者 --- -->
+                    <div class="author-card">作者卡片</div>
+                    <!-- --- 无限滑动标签卡片 --- -->
+                    <div class="label-card">标签卡片</div>
+                </div>
             </div>
         </div>
 
@@ -171,5 +188,9 @@
     <script src="./js/nav-music.js"></script>
     <!-- 菜单 -->
     <script src="./js/menu.js"></script>
+
+    <!-- ============ main库 ============ -->
+    <!-- 动态内容的作品轮播卡片 -->
+    <script src="./js/main/zuopin-card.js"></script>
 </body>
 </html>
