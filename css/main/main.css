@@ -5,11 +5,10 @@
     position: relative;
 }
 
-/* ----轮播 + 热门 + 作品集容器 ---- */
+/* ----轮播 + 热门 + 作品按钮容器 ---- */
 .top-contentBox {
     width: 100%;
     height: 420px;
-    border: #252422 1px dashed;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 300px 100px;
@@ -24,8 +23,108 @@
 .slider-card {
     grid-area: slider;
     height: 100%;
-    border: 2px solid #252422;
+    border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 10px;
+    position: relative;
+    background: #fffcf2;
+    /* background-image: url("data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 64 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 16c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zm33.414-6l5.95-5.95L45.95.636 40 6.586 34.05.636 32.636 2.05 38.586 8l-5.95 5.95 1.414 1.414L40 9.414l5.95 5.95 1.414-1.414L41.414 8zM40 48c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zM9.414 40l5.95-5.95-1.414-1.414L8 38.586l-5.95-5.95L.636 34.05 6.586 40l-5.95 5.95 1.414 1.414L8 41.414l5.95 5.95 1.414-1.414L9.414 40z' fill='%23ff7c20' fill-opacity='0.5' fill-rule='evenodd'/%3E%3C/svg%3E"); */
+    overflow: hidden;
+}
+
+/* 轮播文字容器 */
+.slider-text {
+    width: 300px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    margin-top: 35px;
+    margin-left: 20px;
+}
+
+.slider-text h1 {
+    font-size: 32px;
+    font-weight: 900;
+    
+}
+
+/* 轮播内容网址 */
+.slider-web {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+}
+
+.slider-web p {
+    font-size: 18px;
+    font-weight: 250;
+}
+
+/* 轮播容器 */
+.slider-box {
+    width: 270px;
+    height: 1200px;
+    gap: 15px;
+    position: absolute;
+    right: 0;
+    top: -140%;
+    transform: rotate(35deg) skew(-20deg) scale(0.7);
+    transform-style: preserve-3d;
+    transition: all 2s ease;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 20px;
+}
+
+/* 排列容器 */
+.slider-list {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.slider-list.A {
+    top: 6%
+}
+
+
+/* 图标容器 */
+.slider-img {
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 100%;
+    will-change: transform;
+    animation: sliderList 60s infinite linear;
+    animation-delay: calc(60s / var(--quantity) * (var(--imgs) * -1));
+}
+
+@keyframes sliderList {
+    to {
+        top: calc(-20px * var(--quantity));
+    }
+}
+
+.slider-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+    /* border: 2px solid rgba(26, 26, 26, 0.6); */
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.slider-box:hover {
+    transform: none;
 }
 
 /* --- 热门卡片 --- */
@@ -36,9 +135,10 @@
     border-radius: 10px;
     align-items: flex-start;
     background-image: url("/img/main.img/骨头代码.jpg");
-    background-size: contain;
+    background-size: cover;
     position: relative;
 }
+
 
 /* 热门文字 */
 .popular-card .popular-text {
@@ -74,8 +174,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(6px);
+    background: rgba(255, 255, 255, 0.434);
+    backdrop-filter: blur(5
+    px);
     border: none;
     border-radius: 30px;
     width: auto;
